@@ -1,0 +1,16 @@
+
+<div class="container">
+    
+    <div class="row" style="text-align: center;">
+        <!--Two Way Binding-->
+        <p style="color: royalblue; font-weight: 700;font-size: 16px;">Two Way Binding</p>
+        <div class="col-md-12">
+          <input type ="text" id='uname' [(ngModel)]='name' (input)='onInput($event)'><br>
+
+          <p>{{name}}</p>
+
+        </div>
+
+        <button type="button" [disabled]='enableClick != true' class="btn"(click)='submit()'>Submit</button>
+    </div>
+</div>

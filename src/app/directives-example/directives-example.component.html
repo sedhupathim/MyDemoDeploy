@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row" style="display: flex;justify-content: center;">
+        <div class="col-md-12" style="margin-top: 10px;">
+            <button type="button" class="btn btn-primary" (click)='toggle()'>Toggle</button>
+            <p *ngIf='secretPassword' style="margin-top: 10px;">Password is Secr**t</p>
+            
+            <p *ngFor = 'let value of displayArray' class="whiteClass"
+            [ngStyle] = "{backgroundColor: value>=5 ? 'red': 'blue'}"
+            [ngClass]  = "{whiteClass: value >= 5}">{{value}}</p>
+
+            <p>{{number|formatter:arg1:arg2}}</p>
+            <p appCustomDirective [defaultColor]="'wheat'" [highlightColor]="'gray'"> custom directive using elementRef</p>
+          
+        </div>
+    </div>
+</div>
+
+<!-- <div>
+  <ng-container>
+      <input type="file" id="file" 
+          (change)="getFileDetails($event)">
+
+      <button (click)="uploadFiles()">Upload</button>
+  </ng-container>
+</div>
+
+<div *ngFor="let file of myFiles">
+  <div>*  {{file.name}} - {{file.type}} - {{file.size}}</div> 
+</div>
+ -->
