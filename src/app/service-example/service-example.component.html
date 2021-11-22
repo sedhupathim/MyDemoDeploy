@@ -1,0 +1,10 @@
+<div class="container" style="padding: 10px;">
+    <h2 style ="padding-bottom: 10px;color: aqua;font-weight: 800;">Active User</h2>
+    <div class="col-md-12" style ="padding-bottom: 10px;padding-left: 10px;color: black;font-weight: 600;">
+       <p *ngFor= "let user of activeUser" (click)="activeToinActive(user)">{{user}}</p>
+    </div>
+    <h2 style ="padding-bottom: 10px;color: aqua;font-weight: 800;">Inactive User</h2>
+    <div class="col-md-12"style ="padding-bottom: 10px;padding-left: 10px;color: black;font-weight: 600;">
+       <p *ngFor= "let user of inActiveUser" (click) ="inActiveToActive(user)" >{{user}}</p>
+    </div>
+</div>  

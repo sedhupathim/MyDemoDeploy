@@ -5,8 +5,8 @@ import { Directive,Input,OnInit,ElementRef,Renderer2,HostListener,HostBinding} f
 })
 export class CustomDirectiveDirective implements OnInit{
 
-  @Input()defaultColor :string = 'transparent';
-  @Input()highlightColor :string = 'red';
+  @Input()defaultColor :string = 'none';
+  @Input()highlightColor :string = 'none';
   @HostBinding('style.backgroundColor') backgroundColor:string;
   
 constructor(

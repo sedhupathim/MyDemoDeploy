@@ -10,7 +10,8 @@ import { OddComponent } from './odd/odd.component';
 import { EvenComponent } from './even/even.component';
 import { FormatterPipe } from './formatter.pipe';
 import { CustomDirectiveDirective } from './custom-directive.directive';
-
+import { ServiceExampleComponent } from './service-example/service-example.component';
+import {ActiveInactiveUserService} from './active-inactive-user.service'
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,14 +21,15 @@ import { CustomDirectiveDirective } from './custom-directive.directive';
     OddComponent,
     EvenComponent,
     FormatterPipe,
-    CustomDirectiveDirective
+    CustomDirectiveDirective,
+    ServiceExampleComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ActiveInactiveUserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
